@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>피라미드</title>
+</head>
+<body>
+<pre id="pyramid"></pre>
+
+<script>
+    // 변수를 선언합니다.
+    let output4 = '';
+
+    // 반복문으로 피라미드 생성
+    for (let i = 1; i < 15; i++) {
+        for (let j = 15; j > i; j--) {
+            output4 += ' '; 
+        }
+        for (let k = 0; k < 2 * i - 1; k++) {
+            output4 += '*';
+        }
+        output4 += '\n';
+    }
+
+    // innerHTML을 사용해서 HTML 문서에 출력
+    document.getElementById("pyramid").innerHTML = output4;
+</script>
+</body>
+</html>
